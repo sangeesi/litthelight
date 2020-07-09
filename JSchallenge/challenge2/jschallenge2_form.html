@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title> Form Validation</title>
+  <link rel="stylesheet" href="./resources/css/jsstyle_form.css" type='text/css' />
+</head>
+
+<body onload="document.registration.username.focus();">
+<h1>Registration Form</h1>
+<form name="registration" onsubmit="return formValidate()" action="success.html" method="post" >
+<ul>
+<li><label for="username">Username:</label></li>
+<li><input id="username" type="text" name="username" size="50" /></li>
+<li><label for="password">Password:</label></li>
+<li><input id="password" type="password" name="password" size="50" /></li>
+<li><label for="email">Email:</label></li>
+<li><input id="email" type="text" name="email" size="50" /></li>
+<li><label for="age">Age:</label></li>
+<li><input id="age"type="text" name="Age" size="50" /></li>
+<li><input id="submit" type="submit" name="submit" value="SUBMIT" /></li>
+<li><input id="reset" type="reset" name="reset" value="RESET" /></li> 
+</ul>
+</form>
+
+<script type="text/javascript" src="./resources/js/validation_form.js"></script>
+
+</body>
+</html>
+
+
