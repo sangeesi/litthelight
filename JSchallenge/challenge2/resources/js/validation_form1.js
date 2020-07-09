@@ -37,8 +37,8 @@ function validateForm()
         printError("passErr", "Please enter a valid password")
         }
         else{
-        var password_len = password.value.length;
-        if (password_len == 0 || password_len < 6)
+        var password_len = password.length;
+        if (password_len == 0 || password_len < 5)
         {
             printError("passErr", "Password length should be atleast 5 chars");
         }    
@@ -58,7 +58,7 @@ function validateForm()
         {
         // Regular expression for basic email validation
         var regex = /^\S+@\S+\.\S+$/;
-        if(!email.value.match(regex)) 
+        if(!email.match(regex)) 
             {
             printError("emailErr", "Please enter a valid email address");
             } 
@@ -70,14 +70,13 @@ function validateForm()
         }
     
     // Validate Age
-    if (age = ""){
+    if (age == ""){
         printError("ageErr", "Please enter your Age");
     }
     else {
         var numbers = /^[0-9]+$/;
-        if (!age.value.match(numbers)){
+        if (!age.match(numbers)){
             printError("ageErr", "Age must have numeric values only");
-            age.focus();
         }
         else{
             printError("ageErr", "");
