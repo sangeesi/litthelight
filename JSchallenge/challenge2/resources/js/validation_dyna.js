@@ -71,7 +71,6 @@ var dataPreview = "You've entered the following details: \n" +
 
         // Display input data in a dialog box before submitting the form
         alert(dataPreview);
-        window.Location("success.html")
   }
 else{
 var dataPreview = "Please enter valid values";
