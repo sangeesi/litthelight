@@ -1,5 +1,8 @@
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
 
-function formValidation()
+function formValidate()
 {
     let password = document.registration.password.value,
     username = document.registration.username.value,
@@ -22,10 +25,26 @@ function formValidation()
 return false;
 }
 
+function usernameValidation(username)
+{ 
+    var username = document.registration.username.value;
+    var letters = /^[A-Za-z]+$/;
+    if(username.match(letters))
+    {
+        printError("nameErr", "");
+    }
+    else
+    {
+        var hintMsg =  "Please enter a valid name";
+        document.getElementById(username).innerHTML = hintMsg;
+        username.focus();
+        return false;
+    }
+}
 
 function passwordValidation(password,min,max)
 {
-    var password_len = password.value.length;
+    var password_len = password.length;
     if (password_len == 0 ||password_len >= max || password_len < min)
     {
         alert("Password should not be empty / length be between "+min+" to "+max);
@@ -35,25 +54,12 @@ function passwordValidation(password,min,max)
         return true;
 }
 
-function usernameValidation(username)
-{ 
-    var letters = /^[A-Za-z]+$/;
-    if(username.value.match(letters))
-    {
-        return true;
-    }
-    else
-    {
-        alert("Username must have alphabet characters only");
-        username.focus();
-        return false;
-    }
-}
+
 
 function ageValidation(age)
 { 
 var numbers = /^[0-9]+$/;
-if(age.value.match(numbers))
+if(age.match(numbers))
 {
 return true;
 }
@@ -68,7 +74,7 @@ return false;
 function emailValidation(email)
 {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-if(email.value.match(mailformat))
+if(email.match(mailformat))
 {
 return true;
 }

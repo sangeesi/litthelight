@@ -1,0 +1,88 @@
+html {
+  background-color: #232323;
+  font-family: "Varela Round", sans-serif;
+}
+h1 {
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+.header {
+  background-color: #232323;
+  height: 20%;
+  margin-bottom: 20px;
+}
+.wrapper {
+  position: relative;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+}
+.formWrapper {
+  background-color: #48494a;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+form {
+  position: relative;
+  top: 45%;
+  -ms-transform: translateY(-51%);
+  transform: translateY(-51%);
+  margin: auto;
+  height: 500px;
+  width: 400px;
+  box-shadow: 1px 1px 20px #232323;
+  background: rgb(140, 156, 230);
+  background: radial-gradient(
+    circle,
+    rgb(140, 156, 230) 47%,
+    rgb(14, 46, 192) 99%
+  );
+}
+form input {
+  font-size: 1.5em;
+  font-weight: 100;
+  outline: none;
+  height: 30px;
+  border: solid 2px #19066e;
+  border-radius: 2px;
+  text-align: center;
+  margin: 8px auto;
+  display: flex;
+  width: 80%;
+  transition: ease all 0.4s;
+}
+form span {
+  position: relative;
+  left: 9%;
+  top: 3px;
+  color: white;
+}
+/* Validation Styles */
+.valid {
+  border: solid 2px rgb(98, 185, 98) !important;
+  background-color: #e2ffe4 !important;
+  box-shadow: 1px 1px 20px #232323;
+}
+.invalid {
+  border: solid 3px rgb(255, 79, 79) !important;
+  background-color: #ffe6e6 !important;
+}
+
+input[type="submit"] {
+  font-size: 150%;
+  font-weight: 100;
+  background: #4e5052;
+  border-color: #4e5052;
+  box-shadow: 0 3px 0 #232324;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: #4e5052;
+}
